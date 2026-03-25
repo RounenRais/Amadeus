@@ -113,7 +113,21 @@ export default function Home() {
     scheduleBlink();
     return () => { if (blinkRef.current) clearTimeout(blinkRef.current); };
   }, [scheduleBlink]);
-
+useEffect(() => {
+  const allSprites = [
+    "CRS_JMD_40000400", "CRS_JMD_40000401", "CRS_JMD_40000402",
+    "CRS_JMD_40000600", "CRS_JMD_40000601", "CRS_JMD_40000602",
+    "CRS_JMD_40000700", "CRS_JMD_40000701", "CRS_JMD_40000702",
+    "CRS_JMD_40000800", "CRS_JMD_40000801", "CRS_JMD_40000802",
+    "CRS_JMD_40000900", "CRS_JMD_40000901", "CRS_JMD_40000902",
+    "CRS_JMD_40000a00", "CRS_JMD_40000a01", "CRS_JMD_40000a02",
+    "CRS_JMD_40000b00", "CRS_JMD_40000b01", "CRS_JMD_40000b02",
+  ];
+  allSprites.forEach(name => {
+    const img = new Image();
+    img.src = `/${name}.png`;
+  });
+}, []);
   useEffect(() => {
     const sp = SPRITES[emotion];
     const talking = !done && !!currentText;
