@@ -344,7 +344,7 @@ export default function Home() {
           left: 20px;
           background: #06060f;
           border: 1px solid rgba(125, 211, 252, 0.5);
-          color: #7dd3fc;
+          color: #9a4945 ;
           font-size: 11px;
           font-weight: bold;
           letter-spacing: 0.18em;
